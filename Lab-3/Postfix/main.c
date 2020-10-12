@@ -60,6 +60,16 @@ int main()
     char postfix[20];
     printf("Enter valid infix\n");
     scanf(" %s",infix);
+    for(i=0;i<sizeof(infix);i++)
+    {if(F(infix[i])<=5 && F(infix[i+1])<=5)
+         {
+
+         printf("Enter valid infix\n");
+         exit(0);
+
+         }
+
+    }
     infix_postfix(infix,postfix);
     for(i=0;i<strlen(postfix);i++)
     {if(postfix[i]==')'|| postfix[i]=='(')
